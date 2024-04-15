@@ -1,0 +1,23 @@
+<label>Origen :</label>
+  <select ngModel [(ngModel)]="destinose">
+    <option *ngFor="let opcion of destinoS" [value]="opcion">{{ opcion }}</option>
+  </select>
+  <br><br>
+
+  <label>Destino :</label>
+  <select ngModel [(ngModel)]="destinose2">
+    <option *ngFor="let opcion of destinoS" [value]="opcion">{{ opcion }}</option>
+  </select>
+  <br><br>
+  <input type="date" name="opciones"  [(ngModel)]="fechaida"> 
+  <br><br>
+  
+<input type="date" name="opciones" [(ngModel)]="fechavuelta">
+<br><br>
+<label>Numero de pasajeros :</label>
+<select ngModel [(ngModel)]="numeropase">
+  <option *ngFor="let opcion of numeropas" [value]="opcion">{{ opcion }}</option>
+</select>
+<br><br>
+
+<button (click)="mostrar()">Mostrar Informacion</button>

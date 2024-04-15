@@ -1,0 +1,35 @@
+<div style="margin: 100px;border: 1px solid black;">
+  <label>Tamaño de la RAM: </label>
+
+
+  <label *ngFor="let opcion of opcionesRAM">
+    <input type="radio" name="opciones" [value]="opcion" [(ngModel)]="opcionRamE"> {{ opcion }}
+  </label>
+  <br><br>
+
+
+
+  <label>Tipo de procesador :</label>
+  <select ngModel [(ngModel)]="opcionProE">
+    <option *ngFor="let opcion of opcionesProcesador" [value]="opcion">{{ opcion }}</option>
+  </select>
+
+  <label>
+    <br><br>
+    <label>Tarjeta gráfica</label>
+    <input type="checkbox" [(ngModel)]="opcionGraf">
+  </label><br><br>
+
+  <label>Tipo de Disco </label>
+  <select [(ngModel)]="opcionDisE">
+    <option *ngFor="let opcion of opcionesDisco" [value]="opcion">{{ opcion }}</option>
+  </select>
+  <br><br>
+ 
+  <label>Fuente de alimentacion:</label>
+  <select>
+    <option *ngFor="let opcion of opcionesFuente" [value]="opcion" [(ngModel)]="opcionesFuente">{{ opcion }}</option>
+  </select>
+  <br><br>
+  <button (click)="mostrarinfo()">Mostrar Informacion</button>
+</div>

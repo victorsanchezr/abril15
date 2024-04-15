@@ -1,0 +1,20 @@
+<label>Genero: </label>
+<label *ngFor="let opcion of opcionesGen">
+    <input type="radio" name="opciones" [value]="opcion" [(ngModel)]="opcionesGenE"> {{ opcion }}
+</label>
+<br><br>
+
+
+<label>Nacionaliadades :</label>
+  <select ngModel [(ngModel)]="opcionesNacE">
+    <option *ngFor="let opcion of opcionesNac" [value]="opcion">{{ opcion }}</option>
+  </select>
+
+  <label>
+    <br><br>
+    <label>Lenguajes:</label>
+    <label *ngFor="let opcion of opcionesleng">
+        <input type="checkbox" name="opciones" [value]="opcion" [(ngModel)]="opcioneslengE"> {{ opcion }}
+</label>
+  </label><br><br>
+  <button (click)="mostrarinfor()">Mostrar Informacion</button>
